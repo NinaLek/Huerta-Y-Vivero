@@ -1,0 +1,42 @@
+
+
+body{
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main"
+    "main main main"
+    "footer footer footer";
+    min-height: 100vh;
+}
+
+
+#header{
+    grid-area: header; /* Este lo acomoda con respecto al body porque es el hijo de body*/
+     /*Acá se convierte en padre grid de la barra de navegación */
+    align-content: end; /* al final verticalmente*/
+    background-color: brown;
+}
+
+#main{
+    grid-area: main;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-areas: "novedades imagenes imagenes"
+    
+   
+}
+#imagenes{
+    grid-area: imagenes;
+    background-color: blue;
+}
+
+#novedades{
+    grid-area: novedades;
+    background-color: purple;
+}
+#footer{
+    grid-area: footer;
+    background-color: pink;
+}
